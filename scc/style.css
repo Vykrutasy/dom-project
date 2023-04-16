@@ -1,0 +1,130 @@
+@font-face {
+  font-display: block;
+  font-family: 'Syne';
+  src: url('/fonts/Syne/Syne-ExtraBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --light: #f8f9fa;
+  --red: #dc3545;
+  --gray-dark: #343a40;
+}
+
+.section h1 {
+  font-family: 'Syne', 'Helvetica';
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* styles for calc */
+.calc {
+  max-width: 270px;
+  margin: auto;
+}
+
+.calc-field,
+.calc-btn {
+  border-radius: 0;
+  border: 0;
+}
+
+.calc-field:disabled {
+  background-color: var(--light);
+}
+
+.form-control,
+.calc-row {
+  margin-bottom: 10px;
+}
+
+.calc-row {
+  display: flex;
+  justify-content: center;
+}
+
+.calc-btn {
+  min-width: 60px;
+  min-height: 40px;
+  margin: 0 5px;
+}
+
+/* styles for form */
+[data-tab="form"] input {
+  border: 0;
+  border-bottom: 1px solid lightgray;
+  padding: 0 0 5px 0;
+  box-sizing: border-box;
+}
+
+[data-tab="form"] input:focus, 
+[data-tab="form"] .is-valid:focus, 
+[data-tab="form"] .is-invalid:focus {
+  outline: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+[data-tab="form"] input:focus {
+  border-color: var(--gray-dark);
+}
+
+.form-sq {
+  border-radius: 0;
+}
+
+.form-btn {
+  min-width: 200px;
+  min-height: 40px;
+  border-radius: 0;
+  border: 0;
+}
+
+.contact-group,
+.birthdate-group,
+.notification-group {
+  padding: 0px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-group.not-valid,
+.birthdate-group.not-valid,
+.notification-group.not-valid {
+  border-bottom: 1px solid var(--red);
+}
+
+.fa-eye {
+  position: absolute;
+  top: 50%;
+  right: 2.1%;
+  cursor: pointer;
+  color: lightgray;
+}
+
+.fa-eye-slash {
+  right: 1.7%;
+}
+
+.modal-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  /* display: none; */
+  overflow: hidden;
+  outline: 0;
+}
+
+.show-window {
+  opacity: 1;
+  background-color: #363636d9;
+}
+
+.close-window:focus {
+  outline: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
